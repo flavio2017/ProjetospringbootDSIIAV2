@@ -1,0 +1,18 @@
+package com.example.demo.services;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import org.springframework.beans.factory.annotation.autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.domain.consulta;
+
+@Service 
+public class Consultaservice<Consulta> {
+	@Autowired
+	private ConsultaRepository repositorio;
+	public consulta buscar(Integer id) {
+		
+		optional<Consulta> obj = repositorio.finById(id);
+		return ob.orElse(null);

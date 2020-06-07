@@ -1,0 +1,8 @@
+package com.example.demo.demain;
+import org.springframework.data.jpa.repository.jpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.example.demo.domain.especie;
+
+@Repository
+public interface Especierepository<integer> extends JpaRepository<Especie,integer> {

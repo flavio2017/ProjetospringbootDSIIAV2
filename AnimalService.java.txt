@@ -1,0 +1,23 @@
+package com.example.demo.services;
+
+public class AnimalService {
+	
+	import org.springframework.beans.factory.annotation.Autowired;
+
+	import org.springframework.beans.factory.annotation.autowired;
+	import org.springframework.stereotype.Service;
+
+	import com.example.demo.domain.animal;
+
+	@Service 
+	public class Especieservice<Especie> {
+		@Autowired
+		private especieRepository repositorio;
+		public especie buscar(Integer id) {
+			
+			optional<Especie> obj = repositorio.finById(id);
+			return ob.orElse(null);
+		}
+
+
+}

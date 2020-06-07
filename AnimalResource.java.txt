@@ -1,0 +1,38 @@
+package com.example.Resources;
+
+public class AnimalResource {
+
+
+import java.awt.List;
+
+import java.util.ArrayList;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.Resources.EspecieResource.especie;
+import com.exemple.demo.domain.Especie;
+@RestController 
+@RequestMapping(value="/Animal") 
+
+ 
+ public class AnimalResource<AnimalService> {
+	public class Animal {
+		@Autowired
+		EspecieService service;
+		
+
+	}
+
+
+	@RequestMapping(value = "/{id",method = RequestMethod.GET)
+	public ResponseEntity<?> find(@Pa:hVariable Integer id){
+		
+		Especie obj = service.buscar(id);
+		return ResponseEntity.ok().body(obj);
+	
+
+}

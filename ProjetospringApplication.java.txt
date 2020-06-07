@@ -1,0 +1,148 @@
+package com.example.demo;
+package com.example.demo;
+
+import java.text.SimpleDateFormat;
+
+
+import java.util.Arrays;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.example.demo.domain.Especie;
+import com.example.demo.domain.Animal;
+import com.example.demo.domain.Cliente;
+import com.example.demo.domain.Consulta;
+import com.example.demo.domain.Veterinario;
+import com.example.demo.domain.Especie;
+import com.example.demo.domain.Animal;
+import com.example.demo.domain.Cliente;
+import com.example.demo.domain.Consulta;
+import com.example.demo.domain.Veterinario;
+
+import com.example.demo.repositories.EspecieRepository;
+import com.example.demo.repositories.AnimalRepository;
+import com.example.demo.repositories.ClienteRepository;
+import com.example.demo.repositories.ConsultaRepository;
+import com.example.demo.repositories.VeterinarioRepository;
+
+
+
+	
+	@SpringBootApplication
+	public abstract class ProjetospringApplication implements CommandLineRunner {
+
+		@Autowired
+		EspecieRepository EspecieRepository;
+
+		@Autowired
+		AnimalRepository AnimalRepository;
+
+		@Autowired
+		ClienteRepository ClienteRepository;
+
+		@Autowired
+		ConsultaRepository ConsultaRepository;
+		
+		@Autowired
+		VeterinarioeRepository VeterinarioRepository;
+		
+		
+
+		public static void main(String[] args) {
+			SpringApplication.run(ProjetospringApplication.class, args);
+
+		}
+
+	
+		
+		@Override
+		public void run(String... args) throws Exception {
+
+			Especie  esp1 = new Especie(null, "Felino");
+			Especie  esp2 = new Especie(null, "Canis");
+			
+			Animal A1 = new Produto(null, "Felix", 3, macho);
+			Animal A2 = new Produto(null, "Tico", 2, femea);
+			Animal A3= new Produto(null, "Cicarelle", 5, femea,);
+			Animal A4 = new Animal(null,"Junior" 3, macho)
+
+			esp1.getAnimais().addAll(Arrays.asList(a1, a2));
+			esp2.getanimais().addAll(Arrays.asList(a2));
+			esp3.getAnimais().addAll(Arrays.asList(a3));
+			
+
+			a1.getespecie().addAll(Arrays.asList(esp1));
+			a2.getespecie().addAll(Arrays.asList(esp2));
+			a3.getespecie().addAll(Arrays.asList(especie3));
+			a4.getespecie().addAll(Arrays.asList(especie4));
+			
+			CategoriaRepository.savell(Array(esp1,esp2,esp3));
+			CategoriaRepository.savell(Array(a1,a2,a3, a4));
+			
+			Cliente cl1 = new Cliente =( null,"Jucileudo Arantes", Rua 13 de Maio, Bela Vista,51,3482-5677,juju@gmail.com);
+			Cliente cl1 = new Cliente =( null,"Carmelita Donca", Av.General Smpaio, Centro, 101,3252-1258,kaka@gmail.com);
+			
+			Cli.getAnimais().addAll(ArrayList(a1));
+			cl1.getAnimais().addAll(ArrayList(a2));
+			Cli.getAnimais().addAll(ArrayList(a3));
+			cl1.getAnimais().addAll(ArrayList(a4));
+			
+			a1.getClientes().addAll(ArrayList(cli1));
+            a2.getClientes().addAll(ArrayList(cli2);
+            a3.getClientes().addAll(ArrayList(cli3));
+            a4.getClientes().addAll(ArrayList(cli4));
+            
+            CategoriaRepository.savell(Array(a1,a2,a3,a4, a4));
+			CategoriaRepository.savell(Array(cli1,cli2,cli3, cli4));
+			
+            Consulta c1 = new Consulta(null,"05/05/2020 13:45",av.Rui Barbosa,100, Aldeota, exame Urina);
+            Consulta c2 = new Consulta(null,"05/12/2019 10:45",av.Rui Barbosa,100, Aldeota, raio x torax);
+            Consulta c3 = new Consulta(null,"25/05/2020 9:45",av.Rui Barbosa,100, Aldeota, Vacina gripe);
+            Consulta c3 = new Consulta(null,"05/11/2018 14:45",av.Rui Barbosa,100, Aldeota, cirurgia rabo);
+            
+            a1.getConsultas().addAll(ArrayList(c1));
+            a2.getConsultas().addAll(ArrayList(c2));
+            a3.getConsultas().addAll(ArrayList(c3));
+            a4.getConsultas().addAll(ArrayList(c4));
+            
+            c1.getAnimais().addAll(ArrayList(a1));
+            c2.getAnimais().addAll(ArrayList(a2));
+            c3.getAnimais().addAll(ArrayList(a3));
+            c4.getAnimais().addAll(ArrayList(a4));
+            
+            CategoriaRepository.savell(Array(c1,c2,c3,c4));
+			CategoriaRepository.savell(Array(a1,a2,a3, a4));
+            
+            
+            Veterinario v1 = new Veterinario(null,"Flavio Pinto",12365654-45);
+            Veterinario v1 = new Veterinario(null,"Michel Temer",987654333);
+            Veterinario v1 = new Veterinario(null,"Juciel Filho",3434999-21);
+            
+            C1.getVeterinarios().addAll(ArrayList(v1));
+            C2.getVeterinarios().addAll(ArrayList(v2));
+            C3.getVeterinarios().addAll(ArrayList(v3));
+            C4.getVeterinarios().addAll(ArrayList(v4));
+            
+            V1.getConsultas().addAll(ArrayList(c1));
+            V2.getConsultas().addAll(ArrayList(c2));
+            V2.getConsultas().addAll(ArrayList(c3));
+            V3.getConsultas().addAll(ArrayList(c4));
+            
+            CategoriaRepository.savell(Array(v1,v2,v3,v4));
+			CategoriaRepository.savell(Array(c1,c2,c3, c4));
+            
+            
+            
+            
+			
+			
+			
+			
+	
+	
+	
+
+} 

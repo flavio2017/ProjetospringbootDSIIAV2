@@ -1,0 +1,93 @@
+package com.example.demo.demain;
+import java.io.Serializable;
+import java.util.Arraylist;
+import java.util.list;
+
+import javax.persistentence.Entity;
+import javax.persistence.GeneratedValue;
+import javx.persistence.GenerationType;
+import jaava.persistence.Id;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.jsonIgnore;
+
+@Entity
+public class animal implements serializable {
+	private static final long serialVersionUID = 1L;
+	@Id
+     @GeneratedValue(strategy = GenerationType.IDENTITY)
+private Integer id;
+private String nome;
+private int idade;
+private int sexo;
+
+@JsonIgnore
+@ManyToMany(mappedBy = "")
+@JoinTable(nome = "ESPECIE_ANIMAL"),
+joincolumns = @JoinColumn(name = "especie_id");
+inverseJoinColumns = @JoinColumn(name = "Anim_id")
+)	
+
+private List<Especie> especies = new ArrayList<>;
+
+public Animal() {
+	
+}
+public animal(Integer id, String nome, int idade, int sexo) {
+	super();
+	this.id = id;
+	this.nome = nome;
+	this.idade = idade;
+	this.sexo = sexo;
+}
+public Integer getId() {
+	return id;
+}
+public void setId(Integer id) {
+	this.id = id;
+}
+public String getNome() {
+	return nome;
+}
+public void setNome(String nome) {
+	this.nome = nome;
+}
+public int getIdade() {
+	return idade;
+}
+public void setIdade(int idade) {
+	this.idade = idade;
+}
+public int getSexo() {
+	return sexo;
+}
+public void setSexo(int sexo) {
+	this.sexo = sexo;
+}
+@Override
+public int hashCode() {
+	final int prime = 31;
+	int result = 1;
+	result = prime * result + ((id == null) ? 0 : id.hashCode());
+	return result;
+}
+@Override
+public boolean equals(Object obj) {
+	if (this == obj)
+		return true;
+	if (obj == null)
+		return false;
+	if (getClass() != obj.getClass())
+		return false;
+	animal other = (animal) obj;
+	if (id == null) {
+		if (other.id != null)
+			return false;
+	} else if (!id.equals(other.id))
+		return false;
+	return true;
+}
+
+
+
+}
